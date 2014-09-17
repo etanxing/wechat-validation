@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.9.0"
+    "express": "^4.9.0",
+    "wechat": "^0.8.11"
   }
 }
