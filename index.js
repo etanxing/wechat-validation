@@ -2,8 +2,10 @@ var express = require('express');
 var crypto = require('crypto');
 var app = express();
 var wechat = require('wechat');
+var logger = require('morgan');
 
 app.use(express.query()); // Or app.use(express.query());
+app.use(logger('dev'));
 app.use('/wechat', wechat('test', function (req, res, next) {
   // 微信输入信息都在req.weixin上
   var message = req.weixin;
