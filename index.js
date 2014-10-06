@@ -10,7 +10,7 @@ var express = require('express'),
 app.use(express.query()); // Or app.use(express.query());
 app.use(cookieParser());
 app.use(session({ resave: true, saveUninitialized: true, secret: 'uwotm8' }));
-app.use(logger('dev'));
+//app.use(logger('dev'));
 app.use('/', wechat('test')
     .text(text)
     .image(other)
