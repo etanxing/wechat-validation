@@ -17,7 +17,7 @@ exports.get = function (key, res) {
     res.reply(messages.defaults);
   } else {
     if (LC.list.indexOf(value)) {
-      res.wait(value);
+      res.wait(LC.get(value));
     } else {
       res.reply(value);
     }
