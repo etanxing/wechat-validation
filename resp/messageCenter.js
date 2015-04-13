@@ -16,8 +16,8 @@ exports.get = function (key, res) {
   if (!value) {
     res.reply(messages.defaults);
   } else {
-    if (LC.list.indexOf(value)) {
-      res.wait(LC.get(value));
+    if (LC.indexOf(value)) {
+      res.wait(value);
     } else {
       res.reply(value);
     }

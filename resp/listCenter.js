@@ -1,13 +1,12 @@
 var List = require('wechat').List,
-  list = Object.create(null);
+  list = [];
 
-
-function add(message, key, value) {
-  list[message] = key;
+function add(key, value) {
+  list.push(key);
   List.add(key, value);
 }
 
-add('帮助', 'menu', [
+add('menu', [
   ['回复{a}查看我的性别',
     function(info, req, res) {
       res.reply('我是个妹纸哟');
@@ -21,8 +20,4 @@ add('帮助', 'menu', [
   ['回复{c}查看我的性取向', '这样的事情怎么好意思告诉你啦- -']
 ]);
 
-exports.list = Object.keys(list);
-
-exports.get = function (key) { 
-  return list[key];
-}
+module.exports = list;
