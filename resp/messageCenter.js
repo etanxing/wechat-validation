@@ -8,7 +8,6 @@ var LC = require('./listCenter'),
     }],
     '帮助': 'menu',
     'defaults': '没有找到相关内容, 有需要请回复"帮助"'
-    }
   };
 
 exports.get = function (key, res) {
